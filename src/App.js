@@ -1,25 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+
+import PrimarySearchAppBar from './components/PrimarySearchAppBar';
+
+import Home from './components/Home';
+import MoviePage from './components/MoviePage';
+
+const theme = createMuiTheme();
+
+const resetBackground = () => {
+  document.body.style = `background: #fff`;
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <PrimarySearchAppBar />
+
+        <Switch>
+          <Route
+            path='/'
+            exact
+            render={() => {
+              resetBackground();
+              return <Home />;
+            }}
+          />
+          <Route path='/movie/:id' component={MoviePage} />
+          <Route
+            render={() => {
+              resetBackground();
+              return (
+                <h2 style={{ textAlign: 'center' }}>404 Page not found!</h2>
+              );
+            }}
+          />
+        </Switch>
+      </ThemeProvider>
+    </Router>
   );
 }
 
