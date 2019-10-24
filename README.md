@@ -3,7 +3,7 @@
   <img src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> Search for movies depending on their title, and get information on the movie requested including trailer. Created using React, React router, and Material-UI. Uses [Youtube's Data API](https://developers.google.com/youtube/v3/) and [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction).
+> Search for movies depending on their title, and get information on the movie requested including the trailer. Created using React, React Router and Material-UI. Uses [Youtube's Data API](https://developers.google.com/youtube/v3/) and [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction).
 
 [Demo App](https://gg-movie-db.netlify.com/)
 
