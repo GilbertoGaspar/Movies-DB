@@ -10,15 +10,18 @@
 ## Install
 
 ```sh
+git clone https://github.com/GilbertoGaspar/Movies-DB.git
+cd Movies-DB
 npm install
 ```
 
 ### API Key Dependencies
 
+1. Create a ".env" file in the project root folder with the following format.
+
 ```
-- Changes to file "src/utils/api.js"
-1. Replace YOUTUBE_API_KEY = "", with your Youtube Data API key.
-2. Replace TMDB_API_KEY = "", with your TMDB API key.
+REACT_APP_YOUTUBE_API_KEY = ""
+REACT_APP_TMDB_API_KEY = ""
 ```
 
 ## Usage
